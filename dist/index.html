@@ -9,32 +9,38 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/themes/splide-sea-green.min.css">
     <link rel="shortcut icon" href="assets/imgs/favicon/favicon.ico" type="image/x-icon">
+
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+          new Splide( '#image-carousel' ).mount();
+        } );
+      </script>
 </head>
 <body>
     <header>
-        <div class="shadow-lg shadow-black grid grid-cols-3 bg-inherit h-44">
-            <div class="w-40 mt-8 ml-24">
+        <div class="shadow-black grid grid-cols-3 bg-white h-44 pl-24 pr-18 top-0 left-0 right-0 fixed">
+            <div class="w-40 mt-8">
                 <img src="/assets/logos/zetruc.svg" alt="logo">
             </div>
-            <div class="grid gris-cols-2 mt-16 ml-80">
+            <div class="grid gris-cols-2 mt-16 ml-64">
                 <div>
                     <p class="font-montserrat text-black text-lg tracking-wide">Zetruc Troyes : <b>03 25 40 57 97</b></p>
                 </div>
             </div>
-            <div class="mt-14 ml-20">
-                <button class="w-80 bg-inherit border-primary text-primary font-montserrat rounded-lg inline-block box-border border-2 rounded-x1 hover:bg-primary hover:text-white duration-1000 h-10 font-bold">Obtenir une estimation gratuite</button>
+            <div class="mt-14">
+                <button class="w-96 bg-inherit border-primary text-primary font-montserrat rounded-lg inline-block box-border border-2 rounded-x1 hover:bg-primary hover:text-white duration-1000 h-12 font-bold">Obtenir une estimation gratuite</button>
             </div>
             </div>
     </header>
   
         
-        <div class="wrapped">
+        <div class="wrapper">
             <div id="boutique">
-                <div class="grid grid-cols-2 bg-slate-50">
+                <div class="grid grid-cols-2 bg-slate-50 pt-44">
                     <div class="font-montserrat  tracking-wide ml-24 mt-24">
                         <span class="text-primary text-xl font-bold">Création de votre boutique en ligne</span>
                         <h1 class="text-3xl mt-4 font-bold">Dynamiser votre chiffre d'affaires grâce à un site e-commerce</h1>
-                        <p class="text-xl mt-3">Que ce soit pour la création ou le développement de votre site de vente en ligne, notre agence vous accompagne à chaque étape.</p>
+                        <p class="text-lg mt-3">Que ce soit pour la création ou le développement de votre site de vente en ligne, notre agence vous accompagne à chaque étape.</p>
                         <div class="mt-8">
                             <button class="w-96 bg-primary border-primary text-white rounded-lg inline-block box-border border-2 rounded-x1 hover:bg-white hover:text-primary duration-1000 h-14 font-bold">Recevoir gratuitement une estimation</button>
                         </div>
@@ -62,22 +68,20 @@
            
 
              <div id="agence">
-                <div class="grid gris-cols-3 bg-white">
-                    <!--
+                <div class="grid grid-cols-2 bg-white auto-cols-auto">
                     <div>
                         <img class="w-full" src="./assets/imgs/main/mockup-fossier.png" alt="Fossier">
                     </div>
-                    -->
-                    
-                    <div class="font-montserrat  tracking-wide ml-24 mt-24">
+                     
+                    <div class="font-montserrat  tracking-wide ml-24 mr-36 mt-24">
                     <span class="text-primary text-xl font-bold">Expert en e-commerce</span>
-                    <h1>Agence spécialisée en e-commerce à Troyes</h1>
-                    <h2>C’est l’effervescence chez Zetruc ! (et pas seulement à cause du champagne)</h2>
-                    <p class="text-pretty">L’agence de référence en e-commerce dans l'Aube
+                    <h1 class="text-3xl mt-4 font-bold">Agence spécialisée en e-commerce à Troyes</h1>
+                    <h2 class="bg-tertiary font-bold">C’est l’effervescence chez Zetruc ! (et pas seulement à cause du champagne)</h2>
+                    <p class="text-pretty text-lg mt-3"><b>L’agence de référence en e-commerce</b> dans l'Aube
                         qui vous accompagne dans la création de sites de vente en ligne
                         performants, ergonomiques et élégants pour réussir tous vos projets en ligne !</p>
-                    <p>Nous sommes une agence e-commerce offrant une approche globale de votre projet.</p>
-                    <p>Création de votre site - Développement du trafic - Optimisation de vos ventes</p>
+                    <p class="text-lg mt-3">Nous sommes <b>une agence e-commerce offrant une approche globale</b> de votre projet.</p>
+                    <p class="text-lg mt-3">Création de votre site - Développement du trafic - Optimisation de vos ventes</p>
                     <div class="mt-8">
                         <button class="w-96 bg-primary border-primary text-white rounded-lg inline-block box-border border-2 rounded-x1 hover:bg-white hover:text-primary duration-1000 h-14 font-bold">En savoir plus</button>
                     </div>
@@ -85,6 +89,109 @@
                         
                 </div>
             </div>
+
+            <div id="avis">
+                <section id="image-carousel" class="splide bg-slate-50" aria-label="Beautiful Images">
+                    <div class="splide__track font-bold font-montserrat text-bleu text-center text-xl">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                <div class="grid grid-rows-2">
+                                    <p class="pt-16">« En contrat depuis un an, une équipe jeune en dynamique, des compétences pointues dans tous les domaines. Je recommande vivement. »</p>
+                                    <img  class="place-self-center" src="assets/imgs/slider/logo_rubio.svg" alt="avis rubio">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="grid grid-rows-2">
+                                    <p class="pt-16">
+                                        « Très professionnel et réactif avec des personnes spécialisées pour chaque domaine du E-commerce. »</p>
+                                    <img  class="place-self-center" src="assets/imgs/slider/logo_vsp.svg" alt="avis vsp">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="grid grid-rows-2">
+                                    <p class="pt-16">
+                                        « Equipe très réactive et à l'écoute de ses clients. Les solutions techniques apportées sont qualitatives et maitrisées. Expertise digitale approuvée. »</p>
+                                    <img  class="place-self-center w-80 -mt-5" src="assets/logos/palmer&co.svg" alt="avis palmer">
+                                </div>
+                              </li>
+                              <li class="splide__slide">
+                                <div class="grid grid-rows-2">
+                                    <p class="pt-16">
+                                        « Une agence dynamique avec des idées novatrices et pertinentes. Une grande connaissance des technologies du web. Je recommande ZETRUC pour son engagements et ses qualités humaines. »</p>
+                                    <img  class="place-self-center" src="assets/imgs/slider/logo_timber.svg" alt="avis timber">
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="grid grid-rows-2">
+                                    <p class="pt-16">
+                                        « Une belle agence, à l'écoute de ses clients, impliquée. Équipe réactive et très claire dans ses explications / présentations. »</p>
+                                    <img  class="place-self-center w-1/4" src="assets/logos/fossier.svg"  alt="avis fossier">
+                                </div>
+                            </li>
+                          </ul>
+                    </div>
+                  </section>
+            </div>
+
+          
+
+
+
+            <footer class="bg-bleu">
+                <div class="grid grid-cols-3 pl-64 pr-64 h-64">
+                    <div class="grid grid-rows-3 text-white pt-10">
+                        <div class="font-caveat text-4xl font-bold">
+                            <p>
+                                Zetruc Reims
+                            </p>
+                        </div>
+                        <div class="font-montserrat font-bold text-xl -mt-5">
+                            <p>
+                                03 52 74 03 04 
+                            </p>
+                        </div>
+                        <div class="font-montserrat text-lg -mt-10">
+                            <p>
+                                138, rue Léon Faucher
+                            </p>
+                            <p>
+                                51450 Bétheny
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-rows-3 text-white pt-10">
+                        <div class="font-caveat text-4xl font-bold">
+                            <p>
+                                Zetruc Troyes
+                            </p>
+                        </div>
+                        <div class="font-montserrat font-bold text-xl -mt-5">
+                            <p>
+                                03 25 40 57 97
+                            </p>
+                        </div>
+                        <div class="font-montserrat text-lg -mt-10">
+                            <p>
+                                69 rue de Gournay
+                            </p>
+                            <p>
+                                10000 Troyes
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-rows-2 text-white pt-10">
+                        <div>
+                            <p class="font-bold text-2xl">Vous cherchez une solution personnalisée pour votre entreprise ?</p>
+                        </div>
+                        <div>
+                            <button class="w-96 bg-tertiary border-tertiary text-bleu rounded-lg inline-block box-border border-2 rounded-x1 hover:bg-bleu hover:text-tertiary duration-1000 h-14 font-bold">OBTENEZ UNE ESTIMATION GRATUITE !</button>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
             
         </div>
         
