@@ -4,11 +4,15 @@ import './style.css';
 import { Splide } from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
-let facile = document.getElementById('facile');
-let rapide = document.getElementById('rapide');
-let rentable = document.getElementById('rentable');
-let d1 = document.getElementById('d1')
-
+function elPosition (a) {
+  var b = a.getBoundingClientRect();
+  return {
+    clientX: a.offsetLeft,
+    clientY: a.offsetTop,
+    viewportX: (b.x || b.left),
+    viewportY: (b.y || b.top)
+  }
+}
 
 document.addEventListener( 'DOMContentLoaded', function () {
     new Splide( '#image-carousel', {arrows: false, autoplay: true, interval:4000} ).mount();
@@ -16,22 +20,34 @@ document.addEventListener( 'DOMContentLoaded', function () {
     new Splide( '#caroussel-partenaire', {type    : 'loop', autoplay: 'pause', perPage : 6, arrows: false, pagination: false, pauseOnHover: false, pauseOnFocus: false}).mount( { AutoScroll } );
 
 
-    let scrollPos = [4000,4500,4700,5000,5200];
-    const etapes = document.querySelector('.d-etapes');
+
     const etapesListe = document.querySelectorAll('.d-etapes');
+
+    let scrollPos = [4000,4500,4700,5000,5200];
+
+    etapesListe.forEach((etapesElement, keyElement )=> {
+      var positions = elPosition(etapesElement);
+      scrollPos[keyElement] = positions.clientY;
+    })
+
+    console.log(scrollPos);
     
+    console.log(scrollPos);
     function checkPosition(){
       let windowY = window.scrollY;
-      
+
       etapesListe.forEach((etapesElement, keyElement) => {
-        if(windowY < scrollPos[keyElement]) {
+        if(windowY < scrollPos[keyElement]-(scrollPos[keyElement]*0.1)) {
           etapesElement.classList.add('zt-step');
         } else {
           etapesElement.classList.remove('zt-step');
         }
       })
-      }
+
+
+    }
     
+
     window.addEventListener("scroll", checkPosition);
       
 
