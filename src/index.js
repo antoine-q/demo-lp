@@ -16,7 +16,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     new Splide( '#caroussel-partenaire', {type    : 'loop', autoplay: 'pause', perPage : 6, arrows: false, pagination: false, pauseOnHover: false, pauseOnFocus: false}).mount( { AutoScroll } );
 
 
-    let scrollPos = [4050,4550,4750,5050,5250];
+    let scrollPos = [4000,4500,4700,5000,5200];
     const etapes = document.querySelector('.d-etapes');
     const etapesListe = document.querySelectorAll('.d-etapes');
     
