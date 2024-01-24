@@ -20,7 +20,9 @@
 }
 
 .zt-step{
+    @media screen and (min-width: 900px){
     opacity: 0.2;
     transform: translateX(50px);
     filter: saturate(0)
+    }
 }

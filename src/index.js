@@ -30,14 +30,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
       scrollPos[keyElement] = positions.clientY;
     })
 
-    console.log(scrollPos);
     
-    console.log(scrollPos);
     function checkPosition(){
       let windowY = window.scrollY;
 
       etapesListe.forEach((etapesElement, keyElement) => {
-        if(windowY < scrollPos[keyElement]-(scrollPos[keyElement]*0.1)) {
+        if(windowY < scrollPos[keyElement]-(scrollPos[keyElement]*0.15)) {
           etapesElement.classList.add('zt-step');
         } else {
           etapesElement.classList.remove('zt-step');
@@ -58,6 +56,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
       ongletElement.addEventListener('click', function () {
         onglets.forEach(element => { element.classList.remove('zt-selected') });
         ongletElement.classList.add('zt-selected');
+        
         panneaux.forEach((panneauElement, panneauKey) => {
           panneauElement.classList.add('hidden');
           if (panneauKey === ongletKey) {
