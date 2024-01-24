@@ -5,3 +5,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.liste-custom::before{
+    content:"";
+   display:inline-block;
+   width: 20px;
+   height: 20px;
+   background:url(../dist/assets/imgs/svg/zetruc-cote.svg) no-repeat;
+   background-size: 50%;
+}
+
+.zt-selected{
+    background-color: #E02B88;
+    color: white;
+}
+
+.zt-step{
+    opacity: 0.2;
+    transform: translateX(50px);
+    filter: saturate(0)
+}
