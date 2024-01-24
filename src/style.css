@@ -5,3 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.zt-selected{
+    background-color: #E02B88;
+    color: white;
+}
